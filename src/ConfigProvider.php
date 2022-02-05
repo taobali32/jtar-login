@@ -70,6 +70,20 @@ class ConfigProvider
                     'source' => __DIR__ . '/../publish/UserModel.php',  // 对应的配置文件路径
                     'destination' => BASE_PATH . '/app/Model/UserModel.php',
                 ],
+                [
+                    'id' => 'traitApiResponse',
+                    'description' => '接口辅助用', // 描述
+                    // 建议默认配置放在 publish 文件夹中，文件命名和组件名称相同
+                    'source' => __DIR__ . '/../publish/ApiResponse.php',  // 对应的配置文件路径
+                    'destination' => BASE_PATH . '/app/Traits/ApiResponse.php',
+                ],
+                [
+                    'id' => 'traitLook',
+                    'description' => 'redis锁', // 描述
+                    // 建议默认配置放在 publish 文件夹中，文件命名和组件名称相同
+                    'source' => __DIR__ . '/../publish/Look.php',  // 对应的配置文件路径
+                    'destination' => BASE_PATH . '/app/Traits/Look.php',
+                ],
             ],
         ];
     }
