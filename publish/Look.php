@@ -12,7 +12,7 @@ declare(strict_types=1);
 namespace App\Traits;
 
 use App\Exception\FastException;
-use App\Exception\HttpHandleException;
+use App\Exception\HttpErrorHandleException;
 use Hyperf\Redis\Redis;
 use Hyperf\Utils\ApplicationContext;
 
@@ -55,7 +55,7 @@ trait Look
                 goto beginning;
             }
 
-            throw new HttpHandleException('请求超时');
+            throw new HttpErrorHandleException('请求超时');
         }
 
         if ($runFirst || $runAgain) {

@@ -84,6 +84,20 @@ class ConfigProvider
                     'source' => __DIR__ . '/../publish/Look.php',  // 对应的配置文件路径
                     'destination' => BASE_PATH . '/app/Traits/Look.php',
                 ],
+                [
+                    'id' => 'Fast',
+                    'description' => '操作太快了', // 描述
+                    // 建议默认配置放在 publish 文件夹中，文件命名和组件名称相同
+                    'source' => __DIR__ . '/../publish/Exception/FastException.php',  // 对应的配置文件路径
+                    'destination' => BASE_PATH . '/app/Exception/FastException.php',
+                ],
+                [
+                    'id' => 'HttpError',
+                    'description' => 'HttpError', // 描述
+                    // 建议默认配置放在 publish 文件夹中，文件命名和组件名称相同
+                    'source' => __DIR__ . '/../publish/Exception/HttpErrorHandleException.php',  // 对应的配置文件路径
+                    'destination' => BASE_PATH . '/app/Exception/HttpErrorHandleException.php',
+                ],
             ],
         ];
     }
